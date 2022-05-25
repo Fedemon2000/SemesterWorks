@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+<fieldset>
+<legend> Mi primer conjunto de campos</legend>
+<h1>hola mundo</h1>
+<p>este es un filset que contiene un h1</p>
+<p>otro parrafo dentro del filset</p>
+</fieldset>
+ 
+<fieldset>
+    <legend>datos de contacto</legend>
+<label for="nombre">nombre:</label>
+<input type="text" name="nombre" id="nombre" autofocus placeholder="solo name plis " required>
+<br>
+
+<button>gay</button>
+<label for="txtApellido" >Apellido</label>
+<input type="text" name="txtApellido" id="txtApellido" required placeholder="dos apellidos">
+
+<br>
+<label for="txtCorreo">Correo</label>
+<input type="email" name="txtCorreo" id="txtCorreo" placeholder="ejemplo@gabc.com">
+<br>
+<label for="txtFechaHora">seleccione fecha y hora</label>
+<input type="datetime" id="txtFechaHora">
+<br>
+
+<label for="txtFecha">selecione fecha</label>
+<input type="date" name="txtFecha" id="txtFecha">
+<br>
+<label for="txtHora">seleccione hora</label>
+<input type="time" name="txtHora" id="txtHora">
+
+<br>
+
+<label for="txtNumero">seleccione una cantidad</label>
+<input type="number" name="txtNumero" id="txtNumero" step="0.5" min="0" max="101">
+
+<br>
+
+<label for="color">seleccione un color</label>
+<input type="color" name="color" id="color">
+<br>
+
+<label for="txtLista">seleccione una cantidad a donar</label>
+<input type="text" name="txtLista" id="txtLista" list="lista">
+<datalist id="lista">
+    <option value="10">25</option>
+    <option value="25">25</option>
+    <option value="50">50</option>
+
+</datalist>
+
+</fieldset>
+</div>
+</body>
+</html>
