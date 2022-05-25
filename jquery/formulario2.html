@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../libcss/bootstrap.css">
+    <script src="../libjs/jquery-3.1.1.min.js"></script>
+    <title>Formulario</title>
+    <style>
+        #midiv{
+            background-color: thistle;
+            width: 200px;
+            height: 500px;
+            border: antiquewhite;
+            border-color: skyblue;
+        }
+        #btnEnviar{
+            text-decoration: wavy;
+            background-color: springgreen;
+        }
+        #btnReset{
+            text-decoration: dashed;
+            background-color: darkkhaki;
+            
+        }
+  </style>
+    <script>
+
+        $(document).ready( () => {
+            $("#btnEnviar").click(() =>{
+                
+                var nombre= document.getElementById('idnombre').value;
+                var correo=document.getElementById('idcorreo').value;
+                var asunto=document.getElementById('idasunto').value;
+                var mensaje=document.getElementById('idmensaje').value;
+                let borrar="";
+
+                if(nombre == ""){
+                        alert("El campo de nombre esta vacio");
+                    return false;
+                }else{
+                    if(correo== ""){
+                        alert("El campo de correo esta vacio");
+                        return false;
+                    }else{
+                        if(asunto == ""){
+                        alert("El campo de asunto esta vacio");
+                    return false;  
+                        }else{
+                            if(mensaje == ""){
+                        alert("El campo mensaje esta vacio");
+                            return false;
+                        }else{
+                            alert("Enviado correctamente");
+
+                            document.getElementById('idnombre').value= ""; 
+                            document.getElementById('idcorreo').value= ""; 
+                            document.getElementById('idasunto').value= ""; 
+                            document.getElementById('idmensaje').value= ""; 
+                        }
+
+                                           
+                    }
+                }
+            }
+        });
+       $('#btnReset').click(() => {
+                            document.getElementById('idnombre').value= ""; 
+                            document.getElementById('idcorreo').value= ""; 
+                            document.getElementById('idasunto').value= ""; 
+                            document.getElementById('idmensaje').value= ""; 
+       }
+       )
+        });
+    
+    </script>
+  
+</head>
+<body>
+    <div id="midiv">
+        <h1 id="lol">Datos de envio</h1>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="idnombre" placeholder="Escribe tu nombre">
+        <br>
+        <label for="txtCorreo">Correo:</label>
+        <input type="email"  id="idcorreo" placeholder="ejemplo@abc.com">
+        <br>
+        <label for="asunto">Asunto:</label>
+        <input type="text"  id="idasunto" placeholder="Escribe el asunto">
+        <br>
+        <label for="mensaje">Mensaje:</label>
+        <input type="text" id="idmensaje" placeholder="Escribe el mensaje" >
+        <br>
+        <button class="btn btn-primary" id="btnEnviar">
+            Enviar datos
+          </button>
+        
+          <br>
+          <button type="reset" id="btnReset"> Reseteo</button>
+
+        </div>
+
+</body>
+</html>
